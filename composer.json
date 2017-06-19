@@ -1,0 +1,15 @@
+{
+  "name": "formaldehid/php-web3",
+  "description": "PHP implementation Ethereum javascript API",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0",
+    "graze/guzzle-jsonrpc": "~3.0",
+    "phpseclib/phpseclib": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Formaldehid\\": "src/"
+    }
+  }
+}
