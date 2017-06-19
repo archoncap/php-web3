@@ -11,5 +11,7 @@
     "psr-4": {
       "Formaldehid\\": "src/"
     }
-  }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
