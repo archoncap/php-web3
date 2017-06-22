@@ -63,6 +63,12 @@ class Eth implements Api
     {
         return new Contract($this, $abi);
     }
+    
+    public function blockNumber()
+    {
+        $blockNumber = $this->provider->request("eth_blockNumber");
+        return new BigInteger($blockNumber, 16);
+    }
 
     public function call(array $object) : string
     {
