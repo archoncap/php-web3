@@ -4,33 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e1b161c7afa3ecee1273846c3e2748a",
+    "content-hash": "a814993fee61d728f7bc06fe426a7fcb",
     "packages": [
         {
-            "name": "graze/guzzle-jsonrpc",
-            "version": "3.2.1",
+            "name": "formaldehid/guzzle-jsonrpc",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/graze/guzzle-jsonrpc.git",
-                "reference": "c4513b7659534792b906723158a8388f54275a61"
+                "url": "https://github.com/formaldehid/guzzle-jsonrpc.git",
+                "reference": "fc994f8447edf561ddcc5d7becf1277e9e0607d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/graze/guzzle-jsonrpc/zipball/c4513b7659534792b906723158a8388f54275a61",
-                "reference": "c4513b7659534792b906723158a8388f54275a61",
+                "url": "https://api.github.com/repos/formaldehid/guzzle-jsonrpc/zipball/fc994f8447edf561ddcc5d7becf1277e9e0607d5",
+                "reference": "fc994f8447edf561ddcc5d7becf1277e9e0607d5",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
                 "guzzlehttp/promises": "^1.0",
-                "php": ">=5.5",
+                "php": ">=5.5|^7.0",
                 "psr/http-message": "^1.0"
             },
             "require-dev": {
                 "adlawson/timezone": "~1.0",
-                "fabpot/php-cs-fixer": "~0.5",
+                "graze/standards": "^1.0",
                 "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.3"
+                "phpunit/phpunit": "^4|^5",
+                "squizlabs/php_codesniffer": "^2.9"
             },
             "type": "library",
             "autoload": {
@@ -63,7 +64,7 @@
                 "ring",
                 "rpc"
             ],
-            "time": "2016-02-16T15:18:21+00:00"
+            "time": "2017-09-17T23:36:44+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
