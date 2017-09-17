@@ -112,6 +112,19 @@ class Web3
     }
 
     /**
+     * @param $hex
+     * @return string
+     */
+    public function toAscii($hex)
+    {
+        if(substr($hex, 0, 2) == "0x"){
+            $hex = substr($hex, 2);
+        }
+
+        return $this->_hex2String($hex);
+    }
+
+    /**
      * @param $string
      * @return string
      */
