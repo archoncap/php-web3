@@ -12,8 +12,11 @@ class Web3
 
     public $personal;
 
+    public $provider;
+
     public function __construct(Provider $provider)
     {
+        $this->provider = $provider;
         $this->eth = new Eth($this, $provider);
         $this->personal = new Personal($this, $provider);
     }
@@ -97,6 +100,40 @@ class Web3
         }
         return true;
         */
+    }
+
+    /**
+     * @param $string
+     * @return mixed
+     */
+    public function sha3($string)
+    {
+        return $this->provider->request("web3_sha3", ["0x".$this->_string2Hex($string)]);
+    }
+
+    /**
+     * @param $string
+     * @return string
+     */
+    protected function _string2Hex($string)
+    {
+        $hex='';
+        for ($i=0; $i < strlen($string); $i++){
+            $hex .= dechex(ord($string[$i]));
+        }
+        return $hex;
+    }
+
+    /**
+     * @param $hex
+     * @return string
+     */
+    protected function _hex2String($hex){
+        $string='';
+        for ($i=0; $i < strlen($hex)-1; $i+=2){
+            $string .= chr(hexdec($hex[$i].$hex[$i+1]));
+        }
+        return $string;
     }
 
 }

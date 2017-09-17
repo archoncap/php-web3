@@ -25,9 +25,23 @@ class Personal implements Api
         $this->provider = $provider;
     }
 
-
+    /**
+     * @param string $password
+     * @return string
+     */
     public function newAccount(string $password) : string
     {
         return $this->provider->request("personal_newAccount", [$password]);
+    }
+
+    /**
+     * @param string $address
+     * @param string $passPhrase
+     * @param int $duration
+     * @return mixed
+     */
+    public function unlockAccount(string $address, string $passPhrase, int $duration = 0)
+    {
+        return $this->provider->request("personal_unlockAccount", [$address, $passPhrase, $duration]);
     }
 }
