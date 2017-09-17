@@ -6,9 +6,9 @@ use Formaldehid\Web3\Api\Eth\Contract;
 
 class Token
 {
-    protected $contract;
+    public $contract;
 
-    protected $address;
+    public $address;
 
     /**
      * Token constructor.
