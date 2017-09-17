@@ -42,6 +42,6 @@ class Personal implements Api
      */
     public function unlockAccount(string $address, string $passPhrase, int $duration = 0)
     {
-        return $this->provider->request("personal_unlockAccount", [$address, $passPhrase, $duration]);
+        return $this->provider->request("personal_unlockAccount", [$address, $passPhrase, $this->web3->toHex($duration)]);
     }
 }
