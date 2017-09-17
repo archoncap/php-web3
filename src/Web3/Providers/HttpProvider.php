@@ -11,7 +11,7 @@ class HttpProvider implements Provider
 
     public function __construct(string $url)
     {
-        $this->client = Client::factory($url, ["rpc_error" => true]);
+        $this->client = Client::factory($url, ["rpc_error" => true, "timeout" => 5]);
     }
 
     /**
